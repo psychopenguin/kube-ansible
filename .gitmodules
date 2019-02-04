@@ -1,3 +1,0 @@
-[submodule "ubuntu-lab-libvirt"]
-	path = ubuntu-lab-libvirt
-	url = https://github.com/psychopenguin/ubuntu-lab-libvirt
