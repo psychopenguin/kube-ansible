@@ -1,0 +1,17 @@
+---
+- name: Add kubernetes apt repository key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+- name: Add kubernetes repository
+  apt_repository:
+    repo:
+      deb https://apt.kubernetes.io/ kubernetes-xenial main
+- name: Install kubernetes packages
+  apt:
+    update_cache: true
+    state: present
+    name:
+      - kubelet
+      - kubectl
+      - kubeadm

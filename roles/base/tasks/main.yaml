@@ -1,0 +1,10 @@
+---
+- name: Set timezone to UTC
+  timezone:
+    name: UTC
+- name: Apt upgrade
+  apt:
+    upgrade: true
+    force_apt_get: true
+    autoremove: true
+    autoclean: true
